@@ -1,0 +1,8 @@
+{
+  "outDir": "src/types",
+  "chainVersions": "chainVersions.json",
+  "events": [
+    "balances.Transfer"
+  ],
+  "calls": []
+}
