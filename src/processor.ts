@@ -2,20 +2,18 @@ import {
   EventHandlerContext,
   SubstrateProcessor,
 } from "@subsquid/substrate-processor";
-import { BalancesTransferEvent } from "./types/events";
 import { createTransfer, creteOrUpdateAccount } from "./db/useCases";
 import {
   ARCHIVE_ENDPOINT,
   BATCH_SIZE,
   CHAIN_ENDPOINT,
   STATUS_DB_NAME,
-  TYPES_BUNDLE,
 } from "./constants";
 import { VersionNotSupported } from "./utils/errors";
+import { BalancesTransferEvent } from "./types/generated/events";
 
 const processor = new SubstrateProcessor(STATUS_DB_NAME);
 
-processor.setTypesBundle(TYPES_BUNDLE);
 processor.setBatchSize(BATCH_SIZE);
 
 processor.setDataSource({

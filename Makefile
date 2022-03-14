@@ -22,11 +22,11 @@ codegen:
 	@npx sqd codegen
 
 
-typegen: chainVersions.json
-	@npx squid-substrate-typegen typegen.json
+typegen: versions.json
+	@npx squid-substrate-typegen ./typegen/typegen.json
 
 
-chainVersions.json:
+versions.json:
 	@make explore
 
 
@@ -34,7 +34,7 @@ explore:
 	@npx squid-substrate-metadata-explorer \
 		--chain wss://acala-polkadot.api.onfinality.io/public-ws \
 		--archive https://acala.indexer.gc.subsquid.io/v4/graphql \
-		--out chainVersions.json
+		--out ./typegen/versions.json
 
 
 up:

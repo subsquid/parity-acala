@@ -1,0 +1,9 @@
+{
+  "outDir": "../src/types/generated",
+  "chainVersions": "./versions.json",
+  "typesBundle": "./typesBundle.json",
+  "events": [
+    "balances.Transfer"
+  ],
+  "calls": []
+}
