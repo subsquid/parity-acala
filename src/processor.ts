@@ -14,6 +14,7 @@ import { BalancesTransferEvent } from "./types/generated/events";
 
 const processor = new SubstrateProcessor(STATUS_DB_NAME);
 
+// processor.setTypesBundle("./typegen/typesBundle.json");
 processor.setBatchSize(BATCH_SIZE);
 
 processor.setDataSource({
